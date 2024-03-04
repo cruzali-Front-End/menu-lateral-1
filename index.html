@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Lateral</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="menu-collapsed" id="side-menu">
+
+    <!-- HEADER -->
+    <div id="header">
+      <div id="title"><span>Menu Lateral CSS</span></div>
+      <div id="menu-btn">
+        <div class="btn-hamburger"></div>
+        <div class="btn-hamburger"></div>
+        <div class="btn-hamburger"></div>
+      </div>
+    </div>
+
+    <!-- PERFIL -->
+    <div id="profile">
+      <div id="foto">
+        <img src="perfil.png" alt="foto perfil">
+      </div>
+      <div id="name"><span>Nombre Usuario</span></div>
+    </div>
+
+    <!-- ELEMENTOS -->
+
+    <div id="menu-items">
+      <div class="item">
+        <a href="#">
+          <div class="icon"><img src="cloud.png" alt="cloud imagen"></div>
+          <div class="title"><span>Servicios Cloud</span></div>
+        </a>
+      </div>
+      <div class="item-separator">
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div id="contenedor-main">
+    Contenido
+  </div>
+
+  <script>
+    const btn = document.querySelector('#menu-btn');
+    const menu = document.querySelector('#side-menu');
+
+    btn.addEventListener('click', e => {
+      menu.classList.toggle("menu-expanded");
+      menu.classList.toggle("menu-collapsed");
+
+      document.querySelector('body').classList.toggle('body-expanded');
+
+    });
+  </script>
+
+  
+</body>
+</html>

@@ -1,0 +1,173 @@
+:root {  
+  --bgcolor: rgb(28, 35, 68);
+  --hovercolor: rgba(126, 71, 35, 0.7);
+  --width-collapsed: 50px;
+  --width-expanded: 500px;
+}
+body {
+  background-color: #100707;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-left: var(--width-expanded);  
+}
+.body-expanded {
+  margin-left: var(--width-expanded);
+}
+#contenedor-main {
+  color: white;
+}
+#side-menu {
+  background-color: var(--bgcolor);
+  color: white;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: var(--width-collapsed);
+  transition: width 0.5s ease-in-out;
+}
+#side-menu a {
+  color: white;
+  text-decoration: none;
+}
+#foto img {
+  width: 120px;
+  height: auto;
+}
+
+/* HEADER */
+
+#side-menu #header {
+  box-sizing: border-box;
+  border-bottom: solid 1px var(--hovercolor);
+}
+#side-menu #header #title {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#side-menu #header #title, #side-menu #header #menu-btn {
+  vertical-align: middle;
+}
+#side-menu #header #menu-btn {
+  display: inline-block;
+}
+#side-menu #header #menu-btn {
+  cursor: pointer;
+  padding: 10px;
+  width: var(--width-collapsed);
+  box-sizing: border-box;
+}
+#side-menu #header #menu-btn:hover {
+  background-color: var(--hovercolor);
+}
+
+#side-menu #header #menu-btn .btn-hamburger {
+  background-color: #FFFFFF;
+  height: 2px;
+  width: 100%;
+  margin: 5px;
+}
+
+
+/* PERFIL */
+
+#side-menu #profile {
+  border-bottom: solid 1px var(--hovercolor);
+  padding: 10px 0;
+  text-align: center;
+}
+#side-menu #profile #foto {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#side-menu #profile #foto img {
+  border-radius: 50%;
+  width: 60%;
+}
+#side-menu #profile #foto, #side-menu #profile #name {
+  font-size: 24px;
+  padding: 10px 0;
+  overflow: hidden;
+
+}
+
+ /* ITEM */
+
+#side-menu #menu-items {
+  overflow: hidden;
+}
+#side-menu #menu-items .item {
+  width: var(--width-expanded);
+}
+#side-menu #menu-items .item .icon  {
+  display: inline-block;
+}
+#side-menu #menu-items .item .icon,
+#side-menu #menu-items .item .tiitle {
+  font-size: 14px;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+}
+#side-menu #menu-items .item a {
+  display: block;
+}
+#side-menu #menu-items .item a:hover {
+  background-color: var(--hovercolor);
+}
+#side-menu #menu-items .item .icon {
+  box-sizing: border-box;
+  padding: 10px;
+  width: var(--width-collapsed);
+}
+#side-menu #menu-items .item .icon img {
+  width: 100%;
+}
+#side-menu #menu-items .item .title {
+  padding: 10px 0;
+}
+#side-menu #menu-items .item-separator {
+  height: 1px;
+  border-bottom: solid 1px var(--hovercolor);
+  margin: 15px 0;
+}
+
+.menu-expanded {
+  width: 850px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #title {
+  display: inline-block;
+  width: calc(100% - 50px);
+  margin-right: -5px;
+  padding: 10px;
+}
+
+.menu-expanded #header #title span {
+  /* width: calc(var(--width) - var(--width-collapsed) - 5px); */
+  overflow: hidden;
+  
+}
+
+.menu-expanded #profile #photo {
+  width: 200px;
+}
+.menu-expanded #profile #name {
+  width: 150px;
+}
+
+#menu-collapsed {
+  width: var(--width-expanded);
+}
+
+.menu-collapsed #header #title {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
